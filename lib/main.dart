@@ -6,6 +6,7 @@ import 'package:flutter_app_with_docs_and_my_value/core/auth_service.dart';
 import 'package:flutter_app_with_docs_and_my_value/core/i_auth_service.dart';
 import 'package:flutter_app_with_docs_and_my_value/firebase_options.dart';
 import 'package:flutter_app_with_docs_and_my_value/model/user.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splashScreen/splash_body.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {
@@ -44,6 +45,9 @@ class MyApp extends StatelessWidget {
 
   algoritma:
     1-)Youtube 'daki giriş sistemini buraya entegre et 
+      1-a) Kaydırlamı ekranını kele
+        1-a-1)3 Tane kaydırmalı ekran için resim bul (bunu kodlama bittikten sonra Ill zamanında yap)
+      2-a)giriş Sayfasını entegre et 
     2-) veriler form kullanarak al ve bu iki yapıyı biribiri ile bağla 
       2-a) Bunu yaparken git kullan ve bildmediğin yerde googla ve o problemi nasıl çözecegini araştır
            problemi çözdikkten sonra diğer probleme ilerle ,adım-adım 
@@ -60,43 +64,8 @@ class ForAuthDesing extends StatefulWidget {
 }
 
 class _ForAuthDesingState extends State<ForAuthDesing> {
-  final formKey = GlobalKey<FormState>();
-  String? comingValue;
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Auth Desing'),
-        ),
-        body: Form(
-          key: formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextFormField(
-                onSaved: (newValue) {
-                  setState(() {
-                    comingValue = newValue;
-                  });
-                },
-              ),
-              TextFormField(),
-              MaterialButton(
-                onPressed: () {
-                  setState(() {
-                    // formKey.currentState?.save();
-                    print(comingValue);
-                  });
-                },
-                child: Icon(Icons.save),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashBody());
   }
 }
