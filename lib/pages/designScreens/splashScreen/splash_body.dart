@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splashScreen/splash_content.dart';
 
 class SplashBody extends StatefulWidget {
@@ -20,7 +21,7 @@ class _SplashBodyState extends State<SplashBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.blue,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
@@ -40,9 +41,9 @@ class _SplashBodyState extends State<SplashBody> {
                         text: splashData[index]['text']!)),
               ),
               Expanded(
-                flex: 2,
+                flex: 1,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+                  padding: EdgeInsets.symmetric(vertical: 5, horizontal: 5),
                   child: Column(
                     children: [
                       Row(
@@ -53,6 +54,12 @@ class _SplashBodyState extends State<SplashBody> {
                     ],
                   ),
                 ),
+              ),
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 30),
+                  child: DefaultButton(text: 'Continue', press: () {})),
+              Spacer(
+                flex: 2,
               )
             ],
           ),
