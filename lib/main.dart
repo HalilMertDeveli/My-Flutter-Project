@@ -66,6 +66,9 @@ class ForAuthDesing extends StatefulWidget {
 class _ForAuthDesingState extends State<ForAuthDesing> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashBody());
+    return Provider(
+        create: (_) => Firebase,
+        child:
+            MaterialApp(debugShowCheckedModeBanner: false, home: SplashBody()));
   }
 }
