@@ -13,20 +13,32 @@ class _SplashBodyState extends State<SplashBody> {
   int currentPage = 0;
 
   List<Map<String, String>> splashData = [
-    {"text": "Ghost Music1", "image": "assets/phone.jpg"},
-    {"text": "Ghost Music2", "image": "assets/phone.jpg"},
-    {"text": "Ghost Music3", "image": "assets/phone.jpg"}
+    {
+      "text": "Hello Everyone It's the Ghost Music",
+      "image": "assets/ghost1.png"
+    },
+    {
+      "text": "We are lisning music and happy here",
+      "image": "assets/ghost2.png"
+    },
+    {
+      "text": "If you want to join us just sign-up ",
+      "image": "assets/ghost3.png"
+    }
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
           child: Column(
             children: [
+              Spacer(
+                flex: 1,
+              ),
               Expanded(
                 flex: 3,
                 child: PageView.builder(
@@ -55,12 +67,15 @@ class _SplashBodyState extends State<SplashBody> {
                   ),
                 ),
               ),
+              Spacer(
+                flex: 1,
+              ),
               Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30),
                   child: DefaultButton(text: 'Continue', press: () {})),
               Spacer(
-                flex: 2,
-              )
+                flex: 1,
+              ),
             ],
           ),
         ),
@@ -76,7 +91,7 @@ class _SplashBodyState extends State<SplashBody> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-          color: currentPage == index ? Colors.orange : Colors.white,
+          color: currentPage == index ? Colors.orange : Color(0xFFD8D8D8),
           borderRadius: BorderRadius.circular(3)),
     );
   }
