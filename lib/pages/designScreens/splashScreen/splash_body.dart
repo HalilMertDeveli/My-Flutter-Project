@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splashScreen/splash_content.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/sign_in_page_my_value.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_page.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});
@@ -71,14 +73,28 @@ class _SplashBodyState extends State<SplashBody> {
                 flex: 1,
               ),
               Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 30),
-                  child: DefaultButton(text: 'Continue', press: () {})),
+                padding: EdgeInsets.symmetric(horizontal: 30),
+                child: DefaultButton(
+                    text: 'Continue',
+                    press: () {
+                      directionSignInPage(context);
+                    }),
+              ),
               Spacer(
                 flex: 1,
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  directionSignInPage(BuildContext context) {
+    return Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SignInPageMyValue(),
       ),
     );
   }
