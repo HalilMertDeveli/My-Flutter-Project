@@ -107,7 +107,7 @@ class _SplashBodyState extends State<SplashBody> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-          color: currentPage == index ? Colors.orange : Color(0xFFD8D8D8),
+          color: currentPage == index ? Colors.yellow : Color(0xFFD8D8D8),
           borderRadius: BorderRadius.circular(3)),
     );
   }

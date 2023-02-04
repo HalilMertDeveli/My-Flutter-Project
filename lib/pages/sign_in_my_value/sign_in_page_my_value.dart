@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/companents/body.dart';
 
 class SignInPageMyValue extends StatelessWidget {
   const SignInPageMyValue({super.key});
@@ -6,7 +7,13 @@ class SignInPageMyValue extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Sign In')),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        iconTheme: IconThemeData(color: Colors.black),
+      ),
+      body: Body(),
     );
   }
 }
