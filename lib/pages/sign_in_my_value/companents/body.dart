@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/no_account_text.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/social_card.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/companents/sign_form.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -48,7 +49,8 @@ class Body extends StatelessWidget {
                 press: () {},
               ),
             ],
-          )
+          ),
+          NoAccountText()
         ],
       ),
     ));
