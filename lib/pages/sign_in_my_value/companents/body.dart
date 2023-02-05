@@ -25,6 +25,7 @@ class Body extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          Image.asset('assets/ourAssets/ghost1.png'),
           SizedBox(
             height: 30,
           ),
