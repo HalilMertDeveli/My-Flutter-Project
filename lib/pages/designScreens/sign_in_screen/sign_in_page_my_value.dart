@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/companents/body.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/sign_in_screen/companents/body.dart';
 
 class SignInPageMyValue extends StatelessWidget {
   const SignInPageMyValue({super.key});

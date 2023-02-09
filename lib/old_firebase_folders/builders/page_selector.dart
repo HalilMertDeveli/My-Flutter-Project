@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_with_docs_and_my_value/model/user.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/home_page.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_page.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/model/user.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/home_page.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/sign_in_page.dart';
 
 class PageSelector extends StatelessWidget {
   const PageSelector({super.key, required this.snapshot});

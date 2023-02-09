@@ -2,11 +2,11 @@ import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_with_docs_and_my_value/constraints.dart';
-import 'package:flutter_app_with_docs_and_my_value/core/auth_service.dart';
+import 'package:flutter_app_with_docs_and_my_value/constraints/constraints.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/core/auth_service.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/home_page.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/home_page/home_page.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/home_page.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/home_page/home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SingInForm extends StatefulWidget {

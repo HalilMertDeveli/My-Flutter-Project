@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/home_page/companents/body.dart';
 
 class HomePage2 extends StatelessWidget {
   const HomePage2({super.key});
@@ -15,6 +16,7 @@ class HomePage2 extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
+      body: Body(),
     );
   }
 }

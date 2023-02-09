@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/no_account_text.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/social_card.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/companents/sign_form.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/sign_in_screen/companents/sign_form.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});

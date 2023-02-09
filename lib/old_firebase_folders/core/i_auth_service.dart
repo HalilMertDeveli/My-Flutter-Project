@@ -1,4 +1,4 @@
-import 'package:flutter_app_with_docs_and_my_value/model/user.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/model/user.dart';
 
 abstract class IAuthService {
   Future<AppUser?> createUserEmailAndPassword(

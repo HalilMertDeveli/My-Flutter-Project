@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_with_docs_and_my_value/core/i_auth_service.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/core/i_auth_service.dart';
 import 'package:provider/provider.dart';
 
 class SignInPage extends StatelessWidget {

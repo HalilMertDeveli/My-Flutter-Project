@@ -1,12 +1,12 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_with_docs_and_my_value/builders/auth_state_builder.dart';
-import 'package:flutter_app_with_docs_and_my_value/builders/page_selector.dart';
-import 'package:flutter_app_with_docs_and_my_value/core/auth_service.dart';
-import 'package:flutter_app_with_docs_and_my_value/core/i_auth_service.dart';
-import 'package:flutter_app_with_docs_and_my_value/firebase_options.dart';
-import 'package:flutter_app_with_docs_and_my_value/model/user.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splashScreen/splash_body.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/builders/auth_state_builder.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/builders/page_selector.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/core/auth_service.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/core/i_auth_service.dart';
+import 'package:flutter_app_with_docs_and_my_value/default_firebase_folder/firebase_options.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/model/user.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splash_screen/companents/body.dart';
 import 'package:provider/provider.dart';
 
 Future<void> main() async {

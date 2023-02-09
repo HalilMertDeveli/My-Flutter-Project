@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_app_with_docs_and_my_value/core/i_auth_service.dart';
-import 'package:flutter_app_with_docs_and_my_value/mixin/convert_user_mixin.dart';
-import 'package:flutter_app_with_docs_and_my_value/model/user.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/core/i_auth_service.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/mixin/convert_user_mixin.dart';
+import 'package:flutter_app_with_docs_and_my_value/old_firebase_folders/model/user.dart';
 
 class AuthService with ConvertUser implements IAuthService {
   final authInstance = FirebaseAuth.instance;
