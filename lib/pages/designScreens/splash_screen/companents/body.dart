@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/splashScreen/splash_content.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_my_value/sign_in_page_my_value.dart';
-import 'package:flutter_app_with_docs_and_my_value/pages/sign_in_page.dart';
 
 class SplashBody extends StatefulWidget {
   const SplashBody({super.key});

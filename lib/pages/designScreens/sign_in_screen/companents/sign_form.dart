@@ -1,7 +1,12 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app_with_docs_and_my_value/constraints.dart';
+import 'package:flutter_app_with_docs_and_my_value/core/auth_service.dart';
 import 'package:flutter_app_with_docs_and_my_value/pages/designScreens/companents/default_button.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/home_page.dart';
+import 'package:flutter_app_with_docs_and_my_value/pages/home_page/home_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SingInForm extends StatefulWidget {
@@ -17,6 +22,7 @@ class _SingInFormState extends State<SingInForm> {
   String? email;
   String? password;
   bool remember = false;
+  final authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -68,9 +74,42 @@ class _SingInFormState extends State<SingInForm> {
             DefaultButton(
               text: 'Sign In',
               press: () {
-                if (_formKey.currentState!.validate()) {
+                if (_formKey.currentState!.validate() && errors.isEmpty) {
                   _formKey.currentState!.save();
+                  try {
+                    authService.createUserEmailAndPassword(
+                      email: email.toString(),
+                      password: password.toString(),
+                    );
+                  } on FirebaseAuthException catch (e) {
+                    if (e.code == 'email-already-in-use') {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                            'The account already exists for that email.',
+                          ),
+                        ),
+                      );
+                    }
+                  } catch (e) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text(
+                          e.toString(),
+                        ),
+                      ),
+                    );
+                  }
                 }
+              },
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            DefaultButton(
+              text: 'Sign Up',
+              press: () {
+                print("Hello world");
               },
             )
           ],
@@ -95,18 +134,13 @@ class _SingInFormState extends State<SingInForm> {
     );
   }
 
-  final String kEmailNullError = "Please Enter your email";
-  final emailValidatorRegExp =
-      RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-  final kInvalidEmailError = "Please Enter Valid Email";
-
   TextFormField buildEmailTextFormField() {
     return TextFormField(
       onSaved: (newValue) {
         email = newValue;
       },
       onChanged: (value) {
-        if (value.isNotEmpty && errors.contains(keepToString)) {
+        if (value.isNotEmpty && errors.contains(kEmailNullError)) {
           setState(() {
             errors.remove(kEmailNullError);
           });
